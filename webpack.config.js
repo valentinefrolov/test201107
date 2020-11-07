@@ -1,8 +1,5 @@
-//const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const webpack = require('webpack');
-
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 require("babel-polyfill");
-
 
 module.exports = {
     devtool: 'source-map',
@@ -22,7 +19,7 @@ module.exports = {
         filename: '[name].bundle.js'
     },
     plugins: [
-        //new UglifyJsPlugin({sourceMap: process.env.NODE_ENV !== 'production'})
+        new UglifyJsPlugin({sourceMap: process.env.NODE_ENV !== 'production'})
     ],
     resolve: {
         alias: {
