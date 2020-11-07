@@ -1,0 +1,17 @@
+@import "_common";
+@import "reset";
+
+body {
+  background: $white;
+  font-weight: $Regular;
+  font-family: 'Open Sans', sans-serif;
+  font-size: $font-size;
+  font-size: ($font-size*100/($bp))*1vw;
+  height: 100%;
+  line-height: 1.2;
+  overflow-x: hidden;
+}
+
+@import "desktop/*";
+
+
