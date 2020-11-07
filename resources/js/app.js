@@ -33,6 +33,7 @@ new Vue({
             } else {
                 this.value = num ? parseInt(num).toLocaleString() : '';
             }
+            e.target.value = this.value;
             if(timeout) {
                 clearTimeout(timeout);
                 timeout = null;
@@ -93,7 +94,7 @@ new Vue({
             <div class="calc__form">
                 <label class="calc__input">
                     <span>Обменять</span>
-                    <input v-model="value" @keyup="setValue"/>
+                    <input :value="value" @input="setValue"/>
                 </label>
                 <div class="calc__control">
                     <label class="calc__input calc__input_select">
