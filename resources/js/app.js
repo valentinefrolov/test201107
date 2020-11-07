@@ -102,7 +102,7 @@ new Vue({
                         <select @change="setFrom">
                             <option disabled selected/>
                             <template v-for="item of currencies">
-                                <option v-if="item !== to" :value="item.currency" :selected="from && from.currency === item.currency">{{item.currency}}</option>
+                                <option v-if="item !== to" :value="item.currency" :selected="from && from.currency === item.currency">{{item.currency}} ({{item.name}})</option>
                             </template>
                         </select>
                     </label>
@@ -112,7 +112,7 @@ new Vue({
                         <select @change="setTo">
                             <option disabled selected/>
                             <template v-for="item of currencies">
-                                <option v-if="item !== from" :value="item.currency" :selected="to && to.currency === item.currency">{{item.currency}}</option>
+                                <option v-if="item !== from" :value="item.currency" :selected="to && to.currency === item.currency">{{item.currency}} ({{item.name}})</option>
                             </template>
                         </select>
                     </label>
