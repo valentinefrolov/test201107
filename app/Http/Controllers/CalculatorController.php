@@ -58,6 +58,9 @@ class CalculatorController extends Controller
 
         foreach($data as $item) {
             $model = $this->manager->getModel()->where('currency', $item['currency'])->first();
+            if(!$model) {
+                $model = $this->manager->getModel();
+            }
             foreach($item as $field => $value) {
                 $model->$field = $value;
             }
